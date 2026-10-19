@@ -1,0 +1,352 @@
+:root {
+    --green: rgb(42, 55, 221);
+    --green-dark: rgb(42, 114, 221);
+    --green-pale: #e7f3ed;
+    --page: #f1f5f3;
+    --white: #fff;
+    --text: #18251f;
+    --muted: #65736b;
+    --border: #dbe5df;
+    --red: #c63d32;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Cabeçalho */
+  
+  .topbar {
+    min-height: 68px;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--green);
+    color: var(--white);
+    box-shadow: 0 2px 8px #142e2018;
+  }
+  
+  .brand {
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  
+  nav a {
+    padding: 8px 15px;
+    border-radius: 22px;
+    background: #ffffff20;
+    color: white;
+    font-size: 13px;
+  }
+  
+  nav a:hover {
+    background: #ffffff35;
+  }
+  
+  /* Layout principal */
+  
+  .layout {
+    width: min(100% - 36px, 866px);
+    margin: 27px auto 42px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+  }
+  
+  .panel {
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    box-shadow: 0 5px 16px #193d2b0c;
+  }
+  
+  .panel-heading {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dcebe2;
+  }
+  
+  .panel-heading h1,
+  .panel-heading h2 {
+    margin: 0 0 5px;
+    color: var(--green-dark);
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  
+  .panel-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  
+  /* Destinos */
+  
+  .destination-list {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .destination-item {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 13px;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid #e4ece7;
+    background: #fbfdfb;
+  }
+  
+  .destination-photo {
+    min-height: 92px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .destination-photo.rio {
+    background-image: url(
+      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=350&q=75"
+    );
+  }
+  
+  .destination-photo.gramado {
+    background-image: url(
+      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=350&q=75"
+    );
+  }
+  
+  .destination-photo.lisboa {
+    background-image: url(
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=350&q=75"
+    );
+  }
+  
+  .destination-info h2 {
+    margin: 1px 0 4px;
+    color: var(--green-dark);
+    font-size: 14px;
+  }
+  
+  .destination-info p {
+    margin: 0 0 7px;
+    font-size: 12px;
+  }
+  
+  .text-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .text-button:hover {
+    text-decoration: underline;
+  }
+  
+  .small-note {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+  }
+  
+  /* Formulário */
+  
+  #quote-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #quote-form label {
+    margin: 0 0 5px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  #quote-form input,
+  #quote-form select,
+  #quote-form textarea {
+    width: 100%;
+    min-height: 39px;
+    margin: 0 0 12px;
+    padding: 9px 11px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+    font-size: 12px;
+    outline: none;
+  }
+  
+  #quote-form input:focus,
+  #quote-form select:focus,
+  #quote-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px #287b5b1c;
+  }
+  
+  #quote-form textarea {
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .form-row > div {
+    min-width: 0;
+  }
+  
+  .submit-button {
+    min-height: 39px;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--green);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background: var(--green-dark);
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+  }
+  
+  .form-message {
+    margin: 10px 0 0;
+    font-size: 12px;
+  }
+  
+  .form-message.success {
+    color: var(--green-dark);
+  }
+  
+  .form-message.error {
+    color: var(--red);
+  }
+  
+  /* Rodapé */
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 28px;
+    background: var(--green-dark);
+    color: white;
+    font-size: 12px;
+  }
+  
+  footer strong {
+    font-size: 15px;
+  }
+  
+  footer span {
+    color: #e0eee6;
+  }
+  
+  /* Responsividade */
+  
+  @media (max-width: 720px) {
+    .topbar {
+      min-height: 62px;
+      padding: 12px 18px;
+      flex-wrap: wrap;
+    }
+  
+    .brand {
+      font-size: 19px;
+    }
+  
+    nav {
+      gap: 6px;
+    }
+  
+    nav a {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  
+    .layout {
+      width: min(100% - 28px, 500px);
+      grid-template-columns: 1fr;
+      margin-top: 18px;
+      gap: 15px;
+    }
+  
+    .panel {
+      padding: 17px;
+    }
+  
+    .destination-item {
+      grid-template-columns: 85px minmax(0, 1fr);
+    }
+  
+    footer {
+      padding: 18px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .topbar {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    nav {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
