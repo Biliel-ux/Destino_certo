@@ -64,7 +64,7 @@ function dataValida(data) {
     dataObj.getUTCDate() === dia;
 }
 
-// Verifica a conexão real com o banco
+
 app.get('/api/status', async (_req, res) => {
   try {
     const resultado = await pool.query(
@@ -93,7 +93,7 @@ app.get('/api/destinos', (_req, res) => {
   res.json(destinos);
 });
 
-// Salva o orçamento diretamente no PostgreSQL
+
 app.post('/api/orcamentos', async (req, res) => {
   const body = req.body || {};
 
